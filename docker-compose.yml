@@ -1,0 +1,64 @@
+services:
+  expense-approval:
+    container_name: expense-approval
+    "build": {
+      "dockerfile": "Dockerfile"
+    }
+    ports:
+      - "9002:9002"  # for PHP-FPM
+      - "44857:44857"  # for Xdebug
+    environment:
+      XDEBUG_MODE: debug
+      XDEBUG_CONFIG: client_host=172.17.0.1 client_port=44857
+    volumes:
+      - ./expense-approval:/var/www/html/
+    restart: unless-stopped
+    command: >
+      sh -c "composer install &&
+      php artisan serve --host=0.0.0.0 --port=9002"
+      rm public/storage
+      php artisan storage:link
+      ls -l public/storage
+    networks:
+        - expense-approval-network
+  mailpit:
+    image: axllent/mailpit
+    container_name: mailpit
+    ports:
+      - "1025:1025"
+      - "8025:8025"
+    networks:
+      - expense-approval-network
+  expense-approval-mysql:
+    image: mysql:5.7
+    container_name: expense-approval-mysql
+    ports:
+      - "3306:3306"
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: laravel
+      MYSQL_USER: laravel_user
+      MYSQL_PASSWORD: root
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+    networks:
+      - expense-approval-network
+  expense-approval-vite:
+    container_name: expense-approval-vite
+    image: node:20  # Use a Node.js image
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /var/www/html
+    ports:
+      - "5173:5173"
+    volumes:
+    - ./expense-approval:/var/www/html/
+    - /var/www/html/node_modules  # Prevent node_modules from syncing
+    command: >
+      sh -c "apt update && apt install -y npm && npm install && npm install -D tailwindcss@3 postcss autoprefixer && npm run dev"
+    networks:
+      - expense-approval-network
+networks:
+  expense-approval-network:
+    driver: bridge

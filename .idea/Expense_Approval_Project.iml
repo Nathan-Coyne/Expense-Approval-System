@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module type="WEB_MODULE" version="4">
+  <component name="NewModuleRootManager">
+    <content url="file://$MODULE_DIR$">
+      <sourceFolder url="file://$MODULE_DIR$/expense-approval/app" isTestSource="false" packagePrefix="App\" />
+      <sourceFolder url="file://$MODULE_DIR$/expense-approval/database/factories" isTestSource="false" packagePrefix="Database\Factories\" />
+      <sourceFolder url="file://$MODULE_DIR$/expense-approval/database/seeders" isTestSource="false" packagePrefix="Database\Seeders\" />
+      <sourceFolder url="file://$MODULE_DIR$/expense-approval/tests" isTestSource="true" />
+      <sourceFolder url="file://$MODULE_DIR$/expense-approval/tests" isTestSource="true" packagePrefix="Tests\" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/brick/math" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/carbonphp/carbon-doctrine-types" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/composer" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/dflydev/dot-access-data" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/doctrine/inflector" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/doctrine/lexer" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/dragonmantank/cron-expression" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/egulias/email-validator" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/fakerphp/faker" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/filp/whoops" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/fruitcake/php-cors" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/graham-campbell/result-type" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/guzzlehttp/guzzle" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/guzzlehttp/promises" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/guzzlehttp/psr7" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/guzzlehttp/uri-template" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/hamcrest/hamcrest-php" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/laravel/framework" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/laravel/pint" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/laravel/prompts" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/laravel/sail" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/laravel/sanctum" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/laravel/serializable-closure" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/laravel/tinker" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/league/commonmark" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/league/config" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/league/flysystem" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/league/flysystem-local" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/league/mime-type-detection" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/livewire/livewire" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/mockery/mockery" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/monolog/monolog" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/myclabs/deep-copy" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/nesbot/carbon" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/nette/schema" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/nette/utils" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/nikic/php-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/nunomaduro/collision" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/nunomaduro/termwind" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/phar-io/manifest" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/phar-io/version" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/phpoption/phpoption" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/phpunit/php-code-coverage" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/phpunit/php-file-iterator" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/phpunit/php-invoker" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/phpunit/php-text-template" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/phpunit/php-timer" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/phpunit/phpunit" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/psr/clock" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/psr/container" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/psr/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/psr/http-client" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/psr/http-factory" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/psr/http-message" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/psr/log" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/psr/simple-cache" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/psy/psysh" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/ralouphie/getallheaders" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/ramsey/collection" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/ramsey/uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/sebastian/cli-parser" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/sebastian/code-unit" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/sebastian/code-unit-reverse-lookup" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/sebastian/comparator" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/sebastian/complexity" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/sebastian/diff" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/sebastian/environment" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/sebastian/exporter" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/sebastian/global-state" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/sebastian/lines-of-code" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/sebastian/object-enumerator" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/sebastian/object-reflector" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/sebastian/recursion-context" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/sebastian/type" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/sebastian/version" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/spatie/backtrace" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/spatie/error-solutions" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/spatie/flare-client-php" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/spatie/ignition" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/spatie/laravel-ignition" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/console" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/css-selector" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/deprecation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/error-handler" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/event-dispatcher" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/event-dispatcher-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/finder" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/http-foundation" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/http-kernel" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/mailer" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/mime" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/polyfill-ctype" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/polyfill-intl-grapheme" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/polyfill-intl-idn" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/polyfill-intl-normalizer" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/polyfill-mbstring" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/polyfill-php80" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/polyfill-php83" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/polyfill-uuid" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/process" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/routing" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/service-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/string" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/translation" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/translation-contracts" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/uid" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/var-dumper" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/symfony/yaml" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/theseer/tokenizer" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/tijsverkoyen/css-to-inline-styles" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/vlucas/phpdotenv" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/voku/portable-ascii" />
+      <excludeFolder url="file://$MODULE_DIR$/expense-approval/vendor/webmozart/assert" />
+    </content>
+    <orderEntry type="inheritedJdk" />
+    <orderEntry type="sourceFolder" forTests="false" />
+  </component>
+</module>

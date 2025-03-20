@@ -1,0 +1,5 @@
+mysql-data
+app/storage/app/livewire-tmp/*
+app/storage/app/public/receipts/*
+nginx.conf
+fastcgi-php.conf
