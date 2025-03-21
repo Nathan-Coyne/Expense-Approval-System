@@ -18,13 +18,18 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Auth::routes();
+
 Route::get('/', function () {
-    return view('layouts.app');
+    return auth()->check()
+        ? redirect()->route('dashboard')
+        : redirect()->route('login');
 });
 
-Route::get('/counter', Counter::class); // Use fully qualified name
-Route::get('/login', Login::class)->name('login');
+Route::middleware('auth')->group(function () {
+    Route::get('/create-expense', ExpenseCreate::class)->name('create-expense');
+    Route::get('/review-expense', ExpenseReview::class)->name('review-expense');
+    Route::get('/dashboard', Dashboard::class)->name('dashboard');
+});
 
-Route::get('/create-expense', ExpenseCreate::class)->middleware('auth')->name('create-expense');
-Route::get('/review-expense', ExpenseReview::class)->middleware('auth')->name('review-expense');
-Route::get('/dashboard', Dashboard::class)->middleware('auth')->name('dashboard');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

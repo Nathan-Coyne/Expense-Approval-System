@@ -140,6 +140,7 @@
       <path value="$PROJECT_DIR$/expense-approval/vendor/voku/portable-ascii" />
       <path value="$PROJECT_DIR$/expense-approval/vendor/webmozart/assert" />
       <path value="$PROJECT_DIR$/expense-approval/vendor/livewire/livewire" />
+      <path value="$PROJECT_DIR$/expense-approval/vendor/laravel/ui" />
     </include_path>
   </component>
   <component name="PhpInterpreters">

@@ -83,6 +83,6 @@ class ExpenseCreate extends Component
 
     public function render()
     {
-        return view('livewire.expense-create')->layout('layouts.app');
+        return view('livewire.expense-create')->layout('layouts.app_old');
     }
 }

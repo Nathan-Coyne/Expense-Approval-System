@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-use App\Traits\HasPlatformPermissions;
+use App\Traits\HasEntityPermissions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
@@ -10,7 +10,7 @@ use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable, HasPlatformPermissions;
+    use HasApiTokens, HasFactory, Notifiable, HasEntityPermissions;
 
     /**
      * The attributes that are mass assignable.
@@ -42,9 +42,4 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
-
-    public function hasGrantedPermission(Permission $permission): bool
-    {
-        return $this->grantees();
-    }
 }

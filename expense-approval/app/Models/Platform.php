@@ -2,12 +2,12 @@
 
 namespace App\Models;
 
-use App\Traits\HasPlatformPermissions;
+use App\Traits\HasEntityPermissions;
 use Illuminate\Database\Eloquent\Model;
 
 class Platform extends Model
 {
-    use HasPlatformPermissions;
+    use HasEntityPermissions;
 
     protected $table = 'platforms';
 
