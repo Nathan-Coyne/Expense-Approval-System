@@ -31,5 +31,3 @@ Route::middleware('auth')->group(function () {
     Route::get('/review-expense', ExpenseReview::class)->name('review-expense');
     Route::get('/dashboard', Dashboard::class)->name('dashboard');
 });
-
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');

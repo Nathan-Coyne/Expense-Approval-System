@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PokedexController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,11 +12,6 @@ use App\Http\Controllers\PokedexController;
 | be assigned to the "api" middleware group. Make something great!
 |
 */
-
-// Define a GET endpoint
-Route::get('/pokedex', [PokedexController::class, 'index']);
-
-Route::get('/pokedex/{name}', [PokedexController::class, 'show']);
 
 //Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //    return $request->user();
