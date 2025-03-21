@@ -1,0 +1,7 @@
+.success-banner {
+    @apply mb-6 p-4 bg-green-50 border-l-2 border-green-400 rounded-lg shadow-sm;
+}
+
+.success-banner-container {
+    @apply flex items-center justify-between
+}

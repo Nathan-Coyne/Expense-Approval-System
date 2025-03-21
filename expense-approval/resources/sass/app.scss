@@ -2,49 +2,12 @@
 @tailwind components;
 @tailwind utilities;
 
-/** ToDo Refactor this to be grouped */
-.input-text {
-    @apply p-3 mt-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent;
-}
-.input-label {
-    @apply block text-sm font-medium text-gray-700;
-}
+@import "form";
+@import "layout";
+@import "banner";
 
-.form-title {
-    @apply text-2xl font-bold text-center text-gray-800;
+@theme {
+    --color-midnight: #121063;
+    --color-tahiti: #3ab7bf;
+    --color-bermuda: #78dcca;
 }
-.form-container {
-    @apply w-full max-w-md p-8 bg-white rounded-lg shadow-lg
-}
-
-.submit-button {
-    @apply w-full px-4 py-3 mt-6 text-white bg-blue-500 rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-opacity-50;
-}
-
-.input-error {
-    @apply float-right text-sm text-red-600
-}
-
-.input-image {
-    @apply block text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100;
-}
-
-.input-text-has-icon {
-    @apply pl-8 pr-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent
-}
-.input-text-icon {
-    @apply absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none;
-}
-
-.page-center {
-    @apply flex items-center justify-center min-h-screen;
-}
-
-.success-banner {
-    @apply mb-6 p-4 bg-green-50 border-l-2 border-green-400 rounded-lg shadow-sm;
-}
-
-.success-banner-container {
-    @apply flex items-center justify-between
-}
-
