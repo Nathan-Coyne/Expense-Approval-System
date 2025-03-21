@@ -19,7 +19,6 @@ services:
       php artisan serve --host=0.0.0.0 --port=9002"
       rm public/storage
       php artisan storage:link
-      ls -l public/storage
     networks:
         - expense-approval-network
   mailpit:
