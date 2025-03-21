@@ -7,7 +7,7 @@ use App\Models\Expense;
 use App\Models\Status;
 use App\Models\User;
 use Database\Seeders\CategorySeeder;
-use Database\Seeders\ExpensePermissionSeeder;
+use Database\Seeders\DatabaseSeeder;
 use Database\Seeders\StatusSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Livewire\Livewire;
@@ -27,9 +27,7 @@ class ExpenseReviewTest extends TestCase
         parent::setUp();
 
         $this->user = User::factory()->create();
-        $this->seed(StatusSeeder::class);
-        $this->seed(CategorySeeder::class);
-        $this->seed(ExpensePermissionSeeder::class);
+        $this->seed(DatabaseSeeder::class);
         $this->pendingStatus = Status::where('name', 'Pending')->first();
         $this->approvedStatus = Status::where('name', 'Approved')->first();
         $this->rejectedStatus = Status::where('name', 'Rejected')->first();

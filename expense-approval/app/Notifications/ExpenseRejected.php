@@ -26,10 +26,9 @@ class ExpenseRejected extends Notification
     {
         return (new MailMessage)
             ->subject('Expense Rejected')
-            ->line('Your expense submission requires changes')
+            ->line('Your expense has been rejected')
             ->line('Amount: ' . $this->expense->amountFormatted)
-            ->line('Status: ' . $this->status->name)
-            ->line('Rejection reason: Please provide additional documentation');
+            ->line('Status: ' . $this->status->name);
     }
 }
 

@@ -23,6 +23,6 @@ class CategorySeeder extends Seeder
         ExpenseCategory::firstOrCreate(['name' => 'Office', 'slug' => 'office']);
         ExpenseCategory::firstOrCreate(['name' => 'Other', 'slug' => 'other']);
 
-        $this->command->info('Expense Category successfully!');
+        $this->command->info('Category populated successfully!');
     }
 }

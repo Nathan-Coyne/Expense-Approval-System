@@ -27,8 +27,7 @@ class ExpenseCreate extends Component
     public function mount()
     {
         $this->hasSubmitExpensePermission =
-            Auth::user()->hasGrantedGotPermission(
-                Platform::class,
+            Auth::user()->hasPermission(
                 PlatformPermissions::SUBMIT_EXPENSES->value
             );
 
@@ -49,6 +48,7 @@ class ExpenseCreate extends Component
 
         $this->form->validate();
         $image = $this->form->image->store('receipts', 'public');
+
         $expense = null;
         $status = null;
         try {
@@ -60,7 +60,6 @@ class ExpenseCreate extends Component
                     'extension' => $this->form->image->getClientOriginalExtension(),
                     'type' => $this->form->image->getMimeType()
                 ]);
-
                 $expense = Expense::create([
                     'description' => $this->form->description,
                     'amount' => $this->form->amount,
@@ -83,6 +82,6 @@ class ExpenseCreate extends Component
 
     public function render()
     {
-        return view('livewire.expense-create')->layout('layouts.app_old');
+        return view('livewire.expense-create')->layout('layouts.app');
     }
 }

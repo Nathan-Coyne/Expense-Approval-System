@@ -29,8 +29,13 @@ enum PlatformPermissions: string
         ]);
     }
 
-//    public static function fromValueOrFail(string $value): self
-//    {
-//        return self::tryFrom($value) ?? throw ExpenseCategoryException::notFound($value);
-//    }
+    public function getPlatformPermissionName(): string
+    {
+        return match($this) {
+            self::VIEW_EXPENSES => 'View expenses',
+            self::APPROVE_EXPENSES => 'Approve expenses',
+            self::SUBMIT_EXPENSES => 'Submit expenses',
+            self::VIEW_EXPENSE_REPORT => 'View expenses report',
+        };
+    }
 }

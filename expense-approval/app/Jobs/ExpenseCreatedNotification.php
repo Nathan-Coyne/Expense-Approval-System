@@ -2,6 +2,7 @@
 
 namespace App\Jobs;
 
+use App\Enum\PlatformPermissions;
 use App\Models\Expense;
 use App\Models\Permission;
 use App\Models\Platform;
@@ -26,10 +27,7 @@ class ExpenseCreatedNotification implements ShouldQueue
 
     public function handle(): void
     {
-        /** TODO enum for this*/
-        $platform = Platform::where('name', 'Test Platform')->first();
-        $users = $platform->granteeWithPermission(User::class, 'approve_expense')->get();
-
+        $users = Permission::where('slug', PlatformPermissions::APPROVE_EXPENSES->value)->first()->getUsers()->get();
         foreach ($users as $user) {
             $user->notify(
                 new ExpenseCreated($this->expense, $this->status)

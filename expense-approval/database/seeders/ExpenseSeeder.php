@@ -38,5 +38,6 @@ class ExpenseSeeder extends Seeder
 
                 }
             });
+        $this->command->info('Expense populated successfully!');
     }
 }

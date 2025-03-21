@@ -3,6 +3,7 @@
         <h2 class="form-title">Create New Expense</h2>
 
         <form wire:submit.prevent="save" class="mt-6 space-y-6">
+            @csrf
             <!-- Description -->
             <div>
                 <label for="description" class="input-label">

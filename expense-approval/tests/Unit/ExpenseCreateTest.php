@@ -1,19 +1,17 @@
 <?php
 
-namespace Tests\Feature;
+namespace Tests\Unit;
 
 use App\Enum\ExpenseCategories;
 use App\Models\Category\ExpenseCategory;
 use App\Models\User;
-use Database\Seeders\CategorySeeder;
-use Database\Seeders\ExpensePermissionSeeder;
-use Database\Seeders\StatusSeeder;
+use Database\Seeders\DatabaseSeeder;
 use Illuminate\Foundation\Testing\RefreshDatabase;
 use Illuminate\Http\UploadedFile;
 use Livewire\Livewire;
 use Tests\TestCase;
 
-class ExpenseTest extends TestCase
+class ExpenseCreateTest extends TestCase
 {
     use RefreshDatabase;
 
@@ -27,9 +25,7 @@ class ExpenseTest extends TestCase
 
         $this->user = User::factory()->create();
         $this->otherUser = User::factory()->create();
-        $this->seed(CategorySeeder::class);
-        $this->seed(StatusSeeder::class);
-        $this->seed(ExpensePermissionSeeder::class);
+        $this->seed(DatabaseSeeder::class);
     }
 
     /** @test */
@@ -52,5 +48,4 @@ class ExpenseTest extends TestCase
             'user_id' => $user->id
         ]);
     }
-
 }

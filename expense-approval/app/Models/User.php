@@ -4,13 +4,15 @@ namespace App\Models;
 
 use App\Traits\HasEntityPermissions;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
+use Illuminate\Database\Eloquent\Relations\HasManyThrough;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use Illuminate\Notifications\Notifiable;
 use Laravel\Sanctum\HasApiTokens;
 
 class User extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable, HasEntityPermissions;
+    use HasApiTokens, HasFactory, Notifiable;
 
     /**
      * The attributes that are mass assignable.
@@ -42,4 +44,19 @@ class User extends Authenticatable
         'email_verified_at' => 'datetime',
         'password' => 'hashed',
     ];
+
+    public function permissions(): BelongsToMany
+    {
+        return $this->belongsToMany(
+            Permission::class,
+            'user_permission',
+            'user_id',
+            'permission_id'
+        );
+    }
+
+    public function hasPermission(string $permissionSlug): bool
+    {
+        return $this->permissions()->where('slug', $permissionSlug)->exists();
+    }
 }

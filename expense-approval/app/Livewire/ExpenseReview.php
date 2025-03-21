@@ -4,6 +4,7 @@ namespace App\Livewire;
 
 use App\Enum\PlatformPermissions;
 use App\Jobs\ApprovalNotification;
+use App\Jobs\RejectionNotification;
 use App\Models\Expense;
 use App\Models\Platform;
 use App\Models\Status;
@@ -23,8 +24,7 @@ class ExpenseReview extends Component
         $this->loadPendingExpenses();
 
         $this->hasApproveExpensePermission =
-            Auth::user()->hasGrantedGotPermission(
-                Platform::class,
+            Auth::user()->hasPermission(
                 PlatformPermissions::APPROVE_EXPENSES->value
             );
 
@@ -80,12 +80,12 @@ class ExpenseReview extends Component
             return $this->addError('approve', 'Error rejecting expense try again later or contact support');
         }
 
-        ApprovalNotification::dispatch($expense, $rejected);
+        RejectionNotification::dispatch($expense, $rejected);
         $this->loadPendingExpenses();
         session()->flash('success', 'Expense rejected successfully!');
     }
 
     public function render() {
-        return view('livewire.expense-review')->layout('layouts.app_old');
+        return view('livewire.expense-review')->layout('layouts.app');
     }
 }

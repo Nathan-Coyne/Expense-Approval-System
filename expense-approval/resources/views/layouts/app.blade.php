@@ -18,6 +18,7 @@
 </head>
 <body>
     <div id="app">
+        <livewire:nav />
         <main class="py-4">
             @yield('content')
             @if (isset($slot))

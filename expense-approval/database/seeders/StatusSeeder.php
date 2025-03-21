@@ -13,7 +13,7 @@ class StatusSeeder extends Seeder
         Status::firstOrCreate(['slug' => 'approved', 'name' => 'Approved']);
         Status::firstOrCreate(['slug' => 'rejected', 'name' => 'Rejected']);
 
-        $this->command->info('Expense Category successfully!');
+        $this->command->info('Status populated successfully!');
     }
 
 }

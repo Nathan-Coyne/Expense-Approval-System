@@ -23,13 +23,11 @@ class Dashboard extends Component
         $this->email = $this->user->email;
         $this->name = $this->user->name;
         $this->hasSubmitExpensePermission =
-            $this->user->hasGrantedGotPermission(
-                Platform::class,
+            $this->user->hasPermission(
                 PlatformPermissions::SUBMIT_EXPENSES->value
             );
         $this->hasApproveExpensePermission =
-            $this->user->hasGrantedGotPermission(
-                Platform::class,
+            $this->user->hasPermission(
                 PlatformPermissions::APPROVE_EXPENSES->value
             );
     }
@@ -50,6 +48,6 @@ class Dashboard extends Component
 
     public function render()
     {
-        return view('livewire.dashboard')->layout('layouts.app_old');
+        return view('livewire.dashboard')->layout('layouts.app');
     }
 }

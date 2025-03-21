@@ -11,10 +11,8 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('user_permission', function (Blueprint $table) {
-            $table->foreignId('user_id');
-            $table->foreignId('permission_id');
-            $table->unique(['user_id', 'permission_id']);
+        Schema::table('permissions', function (Blueprint $table) {
+            $table->string('slug')->after('name')->unique();
         });
     }
 
@@ -23,6 +21,8 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('user_permission');
+        Schema::table('permissions', function (Blueprint $table) {
+            $table->dropColumn('slug');
+        });
     }
 };

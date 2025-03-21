@@ -13,6 +13,7 @@ services:
     volumes:
       - ./expense-approval:/var/www/html/
     restart: unless-stopped
+    user: "${UID:-1000}:${GID:-1000}"
     command: >
       sh -c "composer install &&
       php artisan serve --host=0.0.0.0 --port=9002"
@@ -45,18 +46,15 @@ services:
       - expense-approval-network
   expense-approval-vite:
     container_name: expense-approval-vite
-    image: node:20  # Use a Node.js image
-    build:
-      context: .
-      dockerfile: Dockerfile
+    image: node:20  # Official Node.js image with npm pre-installed
     working_dir: /var/www/html
     ports:
       - "5173:5173"
     volumes:
-    - ./expense-approval:/var/www/html/
-    - /var/www/html/node_modules  # Prevent node_modules from syncing
+      - ./expense-approval:/var/www/html  # Mount your project
+      - /var/www/html/node_modules        # Isolate node_modules from the host
     command: >
-      sh -c "apt update && apt install -y npm && npm install && npm install -D tailwindcss@3 postcss autoprefixer && npm run dev"
+      sh -c "npm install && npm run dev"  # Install deps and start Vite
     networks:
       - expense-approval-network
 networks:
